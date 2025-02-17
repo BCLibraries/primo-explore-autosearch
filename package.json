@@ -1,0 +1,9 @@
+{
+  "name": "primo-explore-autosearch",
+  "version": "0.0.1",
+  "description": "Component to activate search when search scope changed updated",
+  "url": "https://developers.exlibrisgroup.com/blog/automatically-activate-a-search-after-changing-search-scope/",
+  "main": "index.js",
+  "author": "Duncan Wilson",
+  "license": "GPL-3.0"
+}
