@@ -12,18 +12,19 @@ angular
           setTimeout(function() {
              document.getElementsByClassName("zero-margin button-confirm md-button md-primoExplore-theme")[0].click();
           }, 500);
-          setTimeout(function() {  // get search scopes
+          setTimeout(function() {
             getSearchScopes();
          }, 500)
         }
         
-        function getSearchScopes() {
-          var searchScopes = document.querySelectorAll('[id^="select_option_"]'); // contain attribute id that starts w "select_option_"
-          for (var i in searchScopes) {
-            console.log(searchScopes[i]);
-            searchScopes[i].onclick = function() {
-              activateSearch();
-            };
+        function getSearchScopes() { // 500 millisecs after component initiates, get all the scopes and attach onclick functions
+          var scopes = document.querySelectorAll('[id^="select_option_"]');
+          for (const key in scopes) {
+            if (scopes.hasOwnProperty(key)) {
+              scopes[key].onclick = function() {
+                activateSearch();
+              };
+            }
           }
         }
       }, 500);
